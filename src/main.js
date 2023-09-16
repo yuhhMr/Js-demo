@@ -2,6 +2,8 @@ import javascriptLogo from '@img/javascript'
 import viteLogo from '@img/Vite'
 import '@css/style'
 import { setupCounter } from '@/components/counter'
+import { client } from '@/components/StompClient'
+import { sockClient } from '@/components/SockjsClient'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -22,3 +24,5 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+// stompJs 组件库测试
+sockClient();
